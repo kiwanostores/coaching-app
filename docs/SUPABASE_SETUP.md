@@ -1,7 +1,7 @@
 # Supabase setup
 
 1. Create a project at supabase.com.
-2. Run the migrations in order (SQL editor, or `supabase db push` with the CLI): `0001`, `0002`, `0003`.
+2. Run the migrations in order (SQL editor, or `supabase db push` with the CLI): `0001`, `0002`, `0003`, `0004`.
 3. Authentication → Providers → Email: **enable "Confirm email"**; Authentication → Sign In: **disable new user signups**.
    (Student accounts are claimed by matching the invited email, so signups must stay closed.)
 4. Authentication → URL Configuration: set Site URL and add `http://localhost:5173/reset-password` to redirect URLs.

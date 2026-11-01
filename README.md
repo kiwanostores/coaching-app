@@ -9,7 +9,7 @@ A web app for a small online coaching business: a **teacher portal** (students, 
 | Phase | Scope | State |
 |---|---|---|
 | 1 | Schema, RLS, storage policies, auth, role-based shells, teacher dashboard stats | Written, **not yet run or tested** |
-| 2 | Students, classes, schedules, attendance, heatmap, reports | Planned |
+| 2 | Students, classes, schedules, sessions, attendance, heatmap, reports + CSV | Written, **not yet run or tested** |
 | 3 | Assignments and submissions | Planned |
 | 4 | Resource library | Planned |
 | 5 | Student portal screens | Planned |
@@ -41,7 +41,7 @@ Never put the `service_role` key in the frontend or in any `VITE_` variable.
 ## Project layout
 
 ```
-supabase/migrations/     0001 schema, 0002 security + functions, 0003 storage
+supabase/migrations/     0001 schema, 0002 security + functions, 0003 storage, 0004 phase-2 functions
 supabase/functions/      invite-student (server-side, uses service role)
 src/app/                 routes
 src/components/          ui primitives, layout shell

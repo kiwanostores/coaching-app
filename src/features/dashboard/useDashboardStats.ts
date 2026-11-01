@@ -12,7 +12,7 @@ export interface DashboardStats {
 /** All numbers come from the teacher_dashboard_stats() database function. Nothing is hardcoded. */
 export const useDashboardStats = () =>
   useQuery({
-    queryKey: ['teacher', 'dashboard-stats'],
+    queryKey: ['dashboard', 'stats'],
     queryFn: async () => {
       const { data, error } = await supabase.rpc('teacher_dashboard_stats')
       if (error) throw error

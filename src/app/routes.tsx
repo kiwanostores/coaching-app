@@ -7,6 +7,12 @@ import { ForgotPassword, ResetPassword } from '@/pages/PasswordReset'
 import Setup from '@/pages/Setup'
 import Pending from '@/pages/Pending'
 import TeacherDashboard from '@/pages/TeacherDashboard'
+import Students from '@/pages/teacher/Students'
+import StudentProfile from '@/pages/teacher/StudentProfile'
+import Classes from '@/pages/teacher/Classes'
+import ClassDetail from '@/pages/teacher/ClassDetail'
+import Attendance from '@/pages/teacher/Attendance'
+import Reports from '@/pages/teacher/Reports'
 import StudentHome from '@/pages/StudentHome'
 
 const teacherNav: NavItem[] = [
@@ -38,12 +44,14 @@ export function AppRoutes() {
       <Route element={<RequireRole role="teacher" />}>
         <Route path="/teacher" element={<AppShell items={teacherNav} roleLabel="Teacher" />}>
           <Route index element={<TeacherDashboard />} />
-          <Route path="students" element={<Pending title="Students" phase={2} />} />
-          <Route path="classes" element={<Pending title="Classes" phase={2} />} />
-          <Route path="attendance" element={<Pending title="Attendance" phase={2} />} />
+          <Route path="students" element={<Students />} />
+          <Route path="students/:id" element={<StudentProfile />} />
+          <Route path="classes" element={<Classes />} />
+          <Route path="classes/:id" element={<ClassDetail />} />
+          <Route path="attendance" element={<Attendance />} />
           <Route path="assignments" element={<Pending title="Assignments" phase={3} />} />
           <Route path="resources" element={<Pending title="Resources" phase={4} />} />
-          <Route path="reports" element={<Pending title="Reports" phase={2} />} />
+          <Route path="reports" element={<Reports />} />
         </Route>
       </Route>
 
